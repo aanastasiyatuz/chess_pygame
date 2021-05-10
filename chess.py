@@ -214,7 +214,6 @@ def rook_moves(index):
              [[index[0] - i, index[1]] for i in range(1, index[0] + 1)],
              [[index[0], index[1] + i] for i in range(1, 8 - index[1])],
              [[index[0], index[1] - i] for i in range(1, index[1] + 1)]]
-
     for direction in cross:
         for positions in direction:
             if on_board(positions):
@@ -267,6 +266,7 @@ def knight_moves(index):
     return board
 
 
+''' PyGame '''
 WIDTH = 700
 
 WIN = pygame.display.set_mode((WIDTH, WIDTH))
@@ -410,7 +410,6 @@ def main(WIN, WIDTH):
                     except:
                         piece_to_move = []
                         print('Can\'t select')
-                    #print(piece_to_move)
 
                 else:
                     try:
